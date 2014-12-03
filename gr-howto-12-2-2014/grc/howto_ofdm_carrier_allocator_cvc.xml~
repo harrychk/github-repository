@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<block>
+  <name>OFDM Carrier Allocator</name>
+  <key>howto_ofdm_carrier_allocator_cvc</key>
+  <category>HOWTO</category>
+  <import>import howto</import>
+  <make>howto.ofdm_carrier_allocator_cvc($num_user, $total_power, $bandwidth, $noise_density, $fft_len, $occupied_carriers, $pilot_carriers, $pilot_symbols, $sync_words, $len_tag_key)</make>
+
+  <param>
+    <name>FFT length</name>
+    <key>fft_len</key>
+    <value>fft_len</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Occupied Carriers</name>
+    <key>occupied_carriers</key>
+    <value>occupied_carriers</value>
+    <type>raw</type>
+  </param>
+
+  <param>
+    <name>Pilot Symbols</name>
+    <key>pilot_symbols</key>
+    <value>((1,1,1,-1),)</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Sync Words</name>
+    <key>sync_words</key>
+    <value>(sync_word1,sync_word2)</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Length tag key</name>
+    <key>len_tag_key</key>
+    <value>"packet_len"</value>
+    <type>string</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  
+  <source>
+    <name>out</name>
+    <type>complex</type>
+    <vlen>$fft_len</vlen>
+  </source>
+</block>

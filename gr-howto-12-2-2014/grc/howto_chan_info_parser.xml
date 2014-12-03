@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<block>
+  <name>chan_info_parser</name>
+  <key>howto_chan_info_parser</key>
+  <category>HOWTO</category>
+  <import>import howto</import>
+  <make>howto.chan_info_parser($fft_len)</make>
+  <param>
+    <name>FFT Length</name>
+    <key>fft_len</key>
+    <value>fft_len</value>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in_chan</name>
+    <type>complex</type>
+  </sink>
+  <sink>
+    <name>in_noise</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>chan_info</name>
+    <type>message</type>
+  </source>
+</block>

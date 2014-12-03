@@ -1,0 +1,80 @@
+#
+# Copyright 2008,2010,2012 Free Software Foundation, Inc.
+#
+# This file is part of GNU Radio
+#
+# GNU Radio is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3, or (at your option)
+# any later version.
+#
+# GNU Radio is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with GNU Radio; see the file COPYING.  If not, write to
+# the Free Software Foundation, Inc., 51 Franklin Street,
+# Boston, MA 02110-1301, USA.
+#
+
+##################################################
+# Imports
+##################################################
+import WX_subcarrier_monitor_window
+from gnuradio.wxgui import common
+from gnuradio import gr
+from gnuradio import analog
+from gnuradio import blocks
+from gnuradio import wxgui
+from gnuradio.wxgui.pubsub import pubsub
+from gnuradio.wxgui.constants import *
+import howto
+
+##################################################
+# subcarrier monitor block 
+##################################################
+class subcarrier_monitor(gr.hier_block2, common.wxgui_hb):
+	"""
+	A subcarrier monitor block and a gui window.
+	"""
+
+	def __init__(
+		self,
+		#parent,
+		size=WX_subcarrier_monitor_window.DEFAULT_WIN_SIZE,
+		title='',
+		num_bins=11,
+	):
+		#init
+		gr.hier_block2.__init__(
+			self,
+			"subcarrier monitor",
+			gr.io_signature(1, 1, gr.sizeof_float),
+			gr.io_signature(0, 0, 0),
+		)
+		#blocks
+		msgq = gr.msg_queue(2)
+		monitor = howto.subcarrier_monitor(msgq)
+		monitor.set_num_bins(num_bins)
+		#controller
+		self.controller = pubsub()
+		self.controller.subscribe(NUM_BINS_KEY, monitor.set_num_bins)
+		self.controller.publish(NUM_BINS_KEY, monitor.get_num_bins)
+		#start input watcher
+		common.input_watcher(msgq, self.controller, MSG_KEY, arg1_key=MINIMUM_KEY, arg2_key=MAXIMUM_KEY)
+		#create window
+		self.win = WX_subcarrier_monitor_window.subcarrier_monitor_window(
+			#parent=parent,
+			controller=self.controller,
+			size=size,
+			title=title,
+			maximum_key=MAXIMUM_KEY,
+			minimum_key=MINIMUM_KEY,
+			num_bins_key=NUM_BINS_KEY,
+			msg_key=MSG_KEY,
+		)
+		common.register_access_methods(self, self.win)
+		#connect
+		self.wxgui_connect(self, monitor)

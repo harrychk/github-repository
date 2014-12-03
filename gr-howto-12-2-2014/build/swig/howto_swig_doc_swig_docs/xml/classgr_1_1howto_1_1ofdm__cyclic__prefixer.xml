@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1howto_1_1ofdm__cyclic__prefixer" kind="class" prot="public">
+    <compoundname>gr::howto::ofdm_cyclic_prefixer</compoundname>
+    <basecompoundref prot="public" virt="virtual">tagged_stream_block</basecompoundref>
+    <includes refid="ofdm__cyclic__prefixer_8h" local="no">ofdm_cyclic_prefixer.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1howto_1_1ofdm__cyclic__prefixer_1a93da777ab0e3bb5d51e1b00fac19742c" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1howto_1_1ofdm__cyclic__prefixer" kindref="compound">ofdm_cyclic_prefixer</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;ofdm_cyclic_prefixer&gt; gr::howto::ofdm_cyclic_prefixer::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_cyclic_prefixer.h" line="51" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_cyclic_prefixer.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__cyclic__prefixer_1a5d0da82b16cc68934f73151845adb787" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1howto_1_1ofdm__cyclic__prefixer_1a93da777ab0e3bb5d51e1b00fac19742c" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::howto::ofdm_cyclic_prefixer::make</definition>
+        <argsstring>(size_t input_size, size_t output_size, int rolloff_len=0, const std::string &amp;len_tag_key=&quot;&quot;)</argsstring>
+        <name>make</name>
+        <param>
+          <type>size_t</type>
+          <declname>input_size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rolloff_len</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>len_tag_key</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FFT length (i.e. length of the OFDM symbols) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FFT length + cyclic prefix length (in samples) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rolloff_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the rolloff flank in samples </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len_tag_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>For framed processing the key of the length tag </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_cyclic_prefixer.h" line="59" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Adds a cyclic prefix and performs pulse shaping on OFDM symbols. </para>    </briefdescription>
+    <detaileddescription>
+<para>Input: OFDM symbols (in the time domain, i.e. after the IFFT). Optionally, entire frames can be processed. In this case, <computeroutput>len_tag_key</computeroutput> must be specified which holds the key of the tag that denotes how many OFDM symbols are in a frame. Output: A stream of (scalar) complex symbols, which include the cyclic prefix and the pulse shaping. Note: If complete frames are processed, and <computeroutput>rolloff_len</computeroutput> is greater than zero, the final OFDM symbol is followed by the delay line of the pulse shaping.</para><para>The pulse shape is a raised cosine in the time domain. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="130">
+        <label>tagged_stream_block</label>
+      </node>
+      <node id="129">
+        <label>gr::howto::ofdm_cyclic_prefixer</label>
+        <link refid="classgr_1_1howto_1_1ofdm__cyclic__prefixer"/>
+        <childnode refid="130" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="132">
+        <label>tagged_stream_block</label>
+      </node>
+      <node id="131">
+        <label>gr::howto::ofdm_cyclic_prefixer</label>
+        <link refid="classgr_1_1howto_1_1ofdm__cyclic__prefixer"/>
+        <childnode refid="132" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_cyclic_prefixer.h" line="49" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_cyclic_prefixer.h" bodystart="48" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classgr_1_1howto_1_1ofdm__cyclic__prefixer_1a5d0da82b16cc68934f73151845adb787" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_cyclic_prefixer</scope><name>make</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__cyclic__prefixer_1a93da777ab0e3bb5d51e1b00fac19742c" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_cyclic_prefixer</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

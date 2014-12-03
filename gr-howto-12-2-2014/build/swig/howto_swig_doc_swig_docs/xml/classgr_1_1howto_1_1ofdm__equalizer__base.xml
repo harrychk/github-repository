@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1howto_1_1ofdm__equalizer__base" kind="class" prot="public" abstract="yes">
+    <compoundname>gr::howto::ofdm_equalizer_base</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">boost::enable_shared_from_this&lt; ofdm_equalizer_base &gt;</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots" prot="public" virt="non-virtual">gr::howto::ofdm_equalizer_1d_pilots</derivedcompoundref>
+    <includes refid="ofdm__equalizer__base_8h" local="no">ofdm_equalizer_base.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1howto_1_1ofdm__equalizer__base_1afbfd44f60a753622deae4cc0064c3956" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1howto_1_1ofdm__equalizer__base" kindref="compound">ofdm_equalizer_base</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;ofdm_equalizer_base&gt; gr::howto::ofdm_equalizer_base::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" line="44" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr_1_1howto_1_1ofdm__equalizer__base_1a63d33d505056c96d902a79754f34802a" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::howto::ofdm_equalizer_base::d_fft_len</definition>
+        <argsstring></argsstring>
+        <name>d_fft_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" line="41" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__equalizer__base_1aa4906315bfb2312336e241600bc070c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::howto::ofdm_equalizer_base::ofdm_equalizer_base</definition>
+        <argsstring>(int fft_len)</argsstring>
+        <name>ofdm_equalizer_base</name>
+        <param>
+          <type>int</type>
+          <declname>fft_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__equalizer__base_1a2529650807e845972a1afdbe7aa71ca8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual gr::howto::ofdm_equalizer_base::~ofdm_equalizer_base</definition>
+        <argsstring>()</argsstring>
+        <name>~ofdm_equalizer_base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__equalizer__base_1a3cc2713ffd570ba81438867d26ba6917" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void gr::howto::ofdm_equalizer_base::reset</definition>
+        <argsstring>()=0</argsstring>
+        <name>reset</name>
+        <reimplementedby refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots_1aac616c168449c33014582cea15103142">reset</reimplementedby>
+        <briefdescription>
+<para>Reset the channel information state knowledge. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__equalizer__base_1a50aad1da4c51e75e787b0bc8110eebfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void gr::howto::ofdm_equalizer_base::equalize</definition>
+        <argsstring>(gr_complex *frame, int n_sym, const int n_symbol, int start_pos, const std::vector&lt; gr_complex &gt; &amp;initial_taps=std::vector&lt; gr_complex &gt;(), const std::vector&lt; tag_t &gt; &amp;tags=std::vector&lt; tag_t &gt;())=0</argsstring>
+        <name>equalize</name>
+        <reimplementedby refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1ab4b7faa05e9a37f1ae1a3c72cb78c52a">equalize</reimplementedby>
+        <param>
+          <type>gr_complex *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_sym</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>n_symbol</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_pos</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>initial_taps</declname>
+          <defval>std::vector&lt; gr_complex &gt;()</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; tag_t &gt; &amp;</type>
+          <declname>tags</declname>
+          <defval>std::vector&lt; tag_t &gt;()</defval>
+        </param>
+        <briefdescription>
+<para>Run the actual equalization. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__equalizer__base_1a41a15bdc105042136cfc171ddb847b01" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void gr::howto::ofdm_equalizer_base::get_channel_state</definition>
+        <argsstring>(std::vector&lt; gr_complex &gt; &amp;taps)=0</argsstring>
+        <name>get_channel_state</name>
+        <reimplementedby refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots_1a1a2cfd40363d26af75ff871fc02d4974">get_channel_state</reimplementedby>
+        <param>
+          <type>std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+<para>Return the current channel state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__equalizer__base_1a789d54f6124930cf7f579fc22e581517" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::howto::ofdm_equalizer_base::fft_len</definition>
+        <argsstring>()</argsstring>
+        <name>fft_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" line="61" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__equalizer__base_1af9581f7c065249cc2c79e25dbcba89fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgr_1_1howto_1_1ofdm__equalizer__base_1afbfd44f60a753622deae4cc0064c3956" kindref="member">sptr</ref></type>
+        <definition>sptr gr::howto::ofdm_equalizer_base::base</definition>
+        <argsstring>()</argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" line="62" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="145">
+        <label>boost::enable_shared_from_this&lt; ofdm_equalizer_base &gt;</label>
+      </node>
+      <node id="146">
+        <label>gr::howto::ofdm_equalizer_1d_pilots</label>
+        <link refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots"/>
+        <childnode refid="144" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>gr::howto::ofdm_equalizer_simpledfe</label>
+        <link refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe"/>
+        <childnode refid="146" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>gr::howto::ofdm_equalizer_base</label>
+        <link refid="classgr_1_1howto_1_1ofdm__equalizer__base"/>
+        <childnode refid="145" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="149">
+        <label>boost::enable_shared_from_this&lt; ofdm_equalizer_base &gt;</label>
+      </node>
+      <node id="148">
+        <label>gr::howto::ofdm_equalizer_base</label>
+        <link refid="classgr_1_1howto_1_1ofdm__equalizer__base"/>
+        <childnode refid="149" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" line="39" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_base.h" bodystart="37" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1af9581f7c065249cc2c79e25dbcba89fb" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_base</scope><name>base</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1a63d33d505056c96d902a79754f34802a" prot="protected" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_base</scope><name>d_fft_len</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1a50aad1da4c51e75e787b0bc8110eebfe" prot="public" virt="pure-virtual"><scope>gr::howto::ofdm_equalizer_base</scope><name>equalize</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1a789d54f6124930cf7f579fc22e581517" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_base</scope><name>fft_len</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1a41a15bdc105042136cfc171ddb847b01" prot="public" virt="pure-virtual"><scope>gr::howto::ofdm_equalizer_base</scope><name>get_channel_state</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1aa4906315bfb2312336e241600bc070c6" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_base</scope><name>ofdm_equalizer_base</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1a3cc2713ffd570ba81438867d26ba6917" prot="public" virt="pure-virtual"><scope>gr::howto::ofdm_equalizer_base</scope><name>reset</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1afbfd44f60a753622deae4cc0064c3956" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_base</scope><name>sptr</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1a2529650807e845972a1afdbe7aa71ca8" prot="public" virt="virtual"><scope>gr::howto::ofdm_equalizer_base</scope><name>~ofdm_equalizer_base</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

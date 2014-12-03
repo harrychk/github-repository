@@ -1,0 +1,942 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1howto_1_1constellation" kind="class" prot="public" abstract="yes">
+    <compoundname>gr::howto::constellation</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">boost::enable_shared_from_this&lt; constellation &gt;</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1howto_1_1constellation__8psk" prot="public" virt="non-virtual">gr::howto::constellation_8psk</derivedcompoundref>
+    <derivedcompoundref refid="classgr_1_1howto_1_1constellation__bpsk" prot="public" virt="non-virtual">gr::howto::constellation_bpsk</derivedcompoundref>
+    <derivedcompoundref refid="classgr_1_1howto_1_1constellation__calcdist" prot="public" virt="non-virtual">gr::howto::constellation_calcdist</derivedcompoundref>
+    <derivedcompoundref refid="classgr_1_1howto_1_1constellation__dqpsk" prot="public" virt="non-virtual">gr::howto::constellation_dqpsk</derivedcompoundref>
+    <derivedcompoundref refid="classgr_1_1howto_1_1constellation__qpsk" prot="public" virt="non-virtual">gr::howto::constellation_qpsk</derivedcompoundref>
+    <derivedcompoundref refid="classgr_1_1howto_1_1constellation__sector" prot="public" virt="non-virtual">gr::howto::constellation_sector</derivedcompoundref>
+    <includes refid="constellation_8h" local="no">constellation.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1aa605a9c8a11fabdbdc10e71a7701bdd7" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr::howto::constellation::d_constellation</definition>
+        <argsstring></argsstring>
+        <name>d_constellation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="202" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1ad9947e8fd622660376472a8da170993b" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; gr::howto::constellation::d_pre_diff_code</definition>
+        <argsstring></argsstring>
+        <name>d_pre_diff_code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="203" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1a57f76992d7f26b8c8bd25f1f2585babf" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::howto::constellation::d_apply_pre_diff_code</definition>
+        <argsstring></argsstring>
+        <name>d_apply_pre_diff_code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="204" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1a59dffa43deeaf3556b66ca582c9d341d" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr::howto::constellation::d_rotational_symmetry</definition>
+        <argsstring></argsstring>
+        <name>d_rotational_symmetry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="205" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1aa48ffa1ac99722510abd3dd5528e050c" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr::howto::constellation::d_dimensionality</definition>
+        <argsstring></argsstring>
+        <name>d_dimensionality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="206" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1a9fc7c5f523603ce08a99a13cc90a1283" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr::howto::constellation::d_arity</definition>
+        <argsstring></argsstring>
+        <name>d_arity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="207" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1aaf796fd71ed1f7995d1783240c19007c" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::howto::constellation::d_scalefactor</definition>
+        <argsstring></argsstring>
+        <name>d_scalefactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The factor by which the user given constellation points were scaled by to achieve an average amplitude of 1. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="210" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1ae884281f78cc324a2b101faf25785d0f" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::howto::constellation::d_re_min</definition>
+        <argsstring></argsstring>
+        <name>d_re_min</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="211" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1a55f9de91624b5c5b02e641e231a5da01" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::howto::constellation::d_re_max</definition>
+        <argsstring></argsstring>
+        <name>d_re_max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="211" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1a7070eae0dfac7b84326852c8eb952b9c" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::howto::constellation::d_im_min</definition>
+        <argsstring></argsstring>
+        <name>d_im_min</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="211" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1a83e4f83c673522036a9c804a275cfde5" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::howto::constellation::d_im_max</definition>
+        <argsstring></argsstring>
+        <name>d_im_max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="211" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1a6d4f6e7f9841aa353f9b9b7537b17cea" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;float&gt; &gt; gr::howto::constellation::d_soft_dec_lut</definition>
+        <argsstring></argsstring>
+        <name>d_soft_dec_lut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="213" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1ab64a86af56e72f24d1260a55bbdc438e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::howto::constellation::d_lut_precision</definition>
+        <argsstring></argsstring>
+        <name>d_lut_precision</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="214" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1constellation_1a1f0bf5a61daf919e48ff37974d07de34" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::howto::constellation::d_lut_scale</definition>
+        <argsstring></argsstring>
+        <name>d_lut_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="215" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a5fa0b9c78a170404e43d4f6c3ea90dd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::howto::constellation::constellation</definition>
+        <argsstring>(std::vector&lt; gr_complex &gt; constell, std::vector&lt; int &gt; pre_diff_code, unsigned int rotational_symmetry, unsigned int dimensionality)</argsstring>
+        <name>constellation</name>
+        <param>
+          <type>std::vector&lt; gr_complex &gt;</type>
+          <declname>constell</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>pre_diff_code</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>rotational_symmetry</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>dimensionality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a765bfaa07bf8e4667fcbedb4f60f9b1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::howto::constellation::constellation</definition>
+        <argsstring>()</argsstring>
+        <name>constellation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1ad4ddd4dee634a07354e3f105713f6722" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual gr::howto::constellation::~constellation</definition>
+        <argsstring>()</argsstring>
+        <name>~constellation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1ac3cc54b6267ab08baae7e11cf8a09c62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::howto::constellation::map_to_points</definition>
+        <argsstring>(unsigned int value, gr_complex *points)</argsstring>
+        <name>map_to_points</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>gr_complex *</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+<para>Returns the constellation points for a symbol value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="74" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a7e0517ad68634c31ff970ed7d9d061a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr::howto::constellation::map_to_points_v</definition>
+        <argsstring>(unsigned int value)</argsstring>
+        <name>map_to_points_v</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a5fd77e860349fc7cc200ea1bef66c3e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int gr::howto::constellation::decision_maker</definition>
+        <argsstring>(const gr_complex *sample)=0</argsstring>
+        <name>decision_maker</name>
+        <reimplementedby refid="classgr_1_1howto_1_1constellation__calcdist_1a31b2fe8aa193dfb5f7f9d17526b48f18">decision_maker</reimplementedby>
+        <reimplementedby refid="classgr_1_1howto_1_1constellation__sector_1aa61ef291aebd9ac9fdadeb409b59526b">decision_maker</reimplementedby>
+        <reimplementedby refid="classgr_1_1howto_1_1constellation__bpsk_1a7ebee4dd3bd6cdd345941490874734d3">decision_maker</reimplementedby>
+        <reimplementedby refid="classgr_1_1howto_1_1constellation__qpsk_1a4491174a579bcff5b2710154a47b2501">decision_maker</reimplementedby>
+        <reimplementedby refid="classgr_1_1howto_1_1constellation__dqpsk_1a50adccc5cb6b9342eea7bac95a53db57">decision_maker</reimplementedby>
+        <reimplementedby refid="classgr_1_1howto_1_1constellation__8psk_1ad1b22514d86f2192e5e15acd187201b2">decision_maker</reimplementedby>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>Returns the constellation point that matches best. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1aeb182d04643b94edbdf31f67ef551b81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int gr::howto::constellation::decision_maker_v</definition>
+        <argsstring>(std::vector&lt; gr_complex &gt; sample)</argsstring>
+        <name>decision_maker_v</name>
+        <param>
+          <type>std::vector&lt; gr_complex &gt;</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>Takes a vector rather than a pointer. Better for SWIG wrapping. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a9cfe684bba2cb60d79796b1042407337" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int gr::howto::constellation::decision_maker_pe</definition>
+        <argsstring>(const gr_complex *sample, float *phase_error)</argsstring>
+        <name>decision_maker_pe</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>phase_error</declname>
+        </param>
+        <briefdescription>
+<para>Also calculates the phase error. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a8933cc49c8b6b4467aefc48250ce4c75" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr::howto::constellation::calc_metric</definition>
+        <argsstring>(const gr_complex *sample, float *metric, gr::howto::trellis_metric_type_t type)</argsstring>
+        <name>calc_metric</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>metric</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegr_1_1howto_1ac72db6a64f05f174d60905e25a3a08b5" kindref="member">gr::howto::trellis_metric_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Calculates distance. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calculates metrics for all points in the constellation. For use with the viterbi algorithm. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a2325d368d0e3ebdb223b1dd5bd3211c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr::howto::constellation::calc_euclidean_metric</definition>
+        <argsstring>(const gr_complex *sample, float *metric)</argsstring>
+        <name>calc_euclidean_metric</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>metric</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1af83054df69cbb1d2b0f7e714e41eb6db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr::howto::constellation::calc_hard_symbol_metric</definition>
+        <argsstring>(const gr_complex *sample, float *metric)</argsstring>
+        <name>calc_hard_symbol_metric</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>metric</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a0390499b202fde68388b105c519f41f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr::howto::constellation::points</definition>
+        <argsstring>()</argsstring>
+        <name>points</name>
+        <briefdescription>
+<para>Returns the set of points in this constellation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="93" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a301c41787d6cb7d9e00ac3839f507475" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr::howto::constellation::s_points</definition>
+        <argsstring>()</argsstring>
+        <name>s_points</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the vector of points in this constellation. Raise error if dimensionality is not one. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a8506c8f82686c989cfa84ed3569b14c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; gr_complex &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;gr_complex&gt; &gt; gr::howto::constellation::v_points</definition>
+        <argsstring>()</argsstring>
+        <name>v_points</name>
+        <briefdescription>
+<para>Returns a vector of vectors of points. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1af5f975d397d2bd28be2beab08a148e7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr::howto::constellation::apply_pre_diff_code</definition>
+        <argsstring>()</argsstring>
+        <name>apply_pre_diff_code</name>
+        <briefdescription>
+<para>Whether to apply an encoding before doing differential encoding. (e.g. gray coding) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="100" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a0f561c1ee1b56c7b3e8babf602f3d14b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::howto::constellation::set_pre_diff_code</definition>
+        <argsstring>(bool a)</argsstring>
+        <name>set_pre_diff_code</name>
+        <param>
+          <type>bool</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Whether to apply an encoding before doing differential encoding. (e.g. gray coding) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="102" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1adf8b19efdec7f2222ccb2cfcea591a4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; gr::howto::constellation::pre_diff_code</definition>
+        <argsstring>()</argsstring>
+        <name>pre_diff_code</name>
+        <briefdescription>
+<para>Returns the encoding to apply before differential encoding. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="104" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a5957a858cbadb9eb657861771f30a81a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int gr::howto::constellation::rotational_symmetry</definition>
+        <argsstring>()</argsstring>
+        <name>rotational_symmetry</name>
+        <briefdescription>
+<para>Returns the order of rotational symmetry. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="106" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a9e6a1c902ae8109f0ab7ff16652a6569" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int gr::howto::constellation::dimensionality</definition>
+        <argsstring>()</argsstring>
+        <name>dimensionality</name>
+        <briefdescription>
+<para>Returns the number of complex numbers in a single symbol. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="108" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1ab934d22fa14eb27c5439fc14dfd597d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int gr::howto::constellation::bits_per_symbol</definition>
+        <argsstring>()</argsstring>
+        <name>bits_per_symbol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="110" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a99e4417f683476d0f378e9878c513b3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int gr::howto::constellation::arity</definition>
+        <argsstring>()</argsstring>
+        <name>arity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="115" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1abe02ba1a4022334c80aa9d5cd6e3dfe5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegr_1_1howto_1a331c6ba45f78fa06f340bef0c6f6205f" kindref="member">constellation_sptr</ref></type>
+        <definition>constellation_sptr gr::howto::constellation::base</definition>
+        <argsstring>()</argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="120" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a53ae12f0417a995eb052a163f146aeef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>pmt::pmt_t</type>
+        <definition>pmt::pmt_t gr::howto::constellation::as_pmt</definition>
+        <argsstring>()</argsstring>
+        <name>as_pmt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="125" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a7cce225c1471de0e981ec26269bcbbc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::howto::constellation::gen_soft_dec_lut</definition>
+        <argsstring>(int precision, float npwr=1.0)</argsstring>
+        <name>gen_soft_dec_lut</name>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>npwr</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Generates the soft decision LUT based on constellation and symbol map. </para>        </briefdescription>
+        <detaileddescription>
+<para>Generates the soft decision LUT based on constellation and symbol map. It can be given a estimate of the noise power in the channel as <computeroutput>npwr</computeroutput>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>precision</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bits of precision on each axis. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>npwr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Estimate of the noise power (if known).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This is expensive to compute. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="142" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1abae2ebefb229dfe9610f242343f07f76" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>virtual std::vector&lt;float&gt; gr::howto::constellation::calc_soft_dec</definition>
+        <argsstring>(gr_complex sample, float npwr=1.0)</argsstring>
+        <name>calc_soft_dec</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>npwr</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Calculate soft decisions for the given <computeroutput>sample</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calculate the soft decisions from the given <computeroutput>sample</computeroutput> at the given noise power <computeroutput>npwr</computeroutput>.</para><para>This is a very costly algorithm (especially for higher order modulations) and should be used sparingly. It uses the <ref refid="classgr_1_1howto_1_1constellation_1a7cce225c1471de0e981ec26269bcbbc5" kindref="member">gen_soft_dec_lut</ref> function to generate the LUT, which should be done once or if a large change in the noise floor is detected.</para><para>Instead of using this function, generate the LUT using the <ref refid="classgr_1_1howto_1_1constellation_1a7cce225c1471de0e981ec26269bcbbc5" kindref="member">gen_soft_dec_lut</ref> after creating the constellation object and then use the <ref refid="classgr_1_1howto_1_1constellation_1a6f11b7fcd57c9d484b175bb3b1c887d6" kindref="member">soft_decision_maker</ref> function to return the answer from the LUT.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The complex sample to get the soft decisions. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>npwr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Estimate of the noise power (if known). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="163" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1af85b62c836304740ef93b5237c6a3446" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::howto::constellation::set_soft_dec_lut</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; float &gt; &gt; &amp;soft_dec_lut, int precision)</argsstring>
+        <name>set_soft_dec_lut</name>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; float &gt; &gt; &amp;</type>
+          <declname>soft_dec_lut</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+        </param>
+        <briefdescription>
+<para>Define a soft decision look-up table. </para>        </briefdescription>
+        <detaileddescription>
+<para>Define a soft decision look-up table (LUT). Because soft decisions can be calculated in various ways with various levels of accuracy and complexity, this function allows users to create a LUT in their own way.</para><para>Setting the LUT here means that <ref refid="classgr_1_1howto_1_1constellation_1a15663efd1d6c0a7896b6b498ccb7723b" kindref="member">has_soft_dec_lut</ref> will return true. Decision vectors returned by <ref refid="classgr_1_1howto_1_1constellation_1a6f11b7fcd57c9d484b175bb3b1c887d6" kindref="member">soft_decision_maker</ref> will be calculated using this LUT.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>soft_dec_lut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The soft decision LUT as a vector of tuples (vectors in C++) of soft decisions. Each element of the LUT is a vector of k-bit floats (where there are k bits/sample in the constellation). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>precision</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bits of precision used when generating the LUT. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="183" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a15663efd1d6c0a7896b6b498ccb7723b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr::howto::constellation::has_soft_dec_lut</definition>
+        <argsstring>()</argsstring>
+        <name>has_soft_dec_lut</name>
+        <briefdescription>
+<para>Returns True if the soft decision LUT has been defined, False otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="187" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a6f11b7fcd57c9d484b175bb3b1c887d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr::howto::constellation::soft_decision_maker</definition>
+        <argsstring>(gr_complex sample)</argsstring>
+        <name>soft_decision_maker</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>Returns the soft decisions for the given <computeroutput>sample</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns the soft decisions for the given <computeroutput>sample</computeroutput>. If a LUT is defined for the object, the decisions will be calculated from there. Otherwise, this function will call calc_soft_dec directly to calculate the soft decisions.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The complex sample to get the soft decisions. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="198" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1a75e82907ba4191edb7d5104a29964e53" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::howto::constellation::get_distance</definition>
+        <argsstring>(unsigned int index, const gr_complex *sample)</argsstring>
+        <name>get_distance</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="217" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1affd663df6ca9d239af1655e439055b00" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int gr::howto::constellation::get_closest_point</definition>
+        <argsstring>(const gr_complex *sample)</argsstring>
+        <name>get_closest_point</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="218" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1aedf1a3837d1cfce68bc1030449c8e91c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::howto::constellation::calc_arity</definition>
+        <argsstring>()</argsstring>
+        <name>calc_arity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="219" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1constellation_1aaf2bea7ab02533d93f4a9d46fa709d8d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::howto::constellation::max_min_axes</definition>
+        <argsstring>()</argsstring>
+        <name>max_min_axes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="221" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An abstracted constellation object. </para>    </briefdescription>
+    <detaileddescription>
+<para>The constellation objects hold the necessary information to pass around constellation information for modulators and demodulators. These objects contain the mapping between the bits and the constellation points used to represent them as well as methods for slicing the symbol space. Various implementations are possible for efficiency and ease of use.</para><para>Standard constellations (BPSK, QPSK, QAM, etc) can be inherited from this class and overloaded to perform optimized slicing and constellation mappings. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="11">
+        <label>gr::howto::constellation_bpsk</label>
+        <link refid="classgr_1_1howto_1_1constellation__bpsk"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>gr::howto::constellation_expl_rect</label>
+        <link refid="classgr_1_1howto_1_1constellation__expl__rect"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>gr::howto::constellation_rect</label>
+        <link refid="classgr_1_1howto_1_1constellation__rect"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>gr::howto::constellation_qpsk</label>
+        <link refid="classgr_1_1howto_1_1constellation__qpsk"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>gr::howto::constellation_psk</label>
+        <link refid="classgr_1_1howto_1_1constellation__psk"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>boost::enable_shared_from_this&lt; constellation &gt;</label>
+      </node>
+      <node id="12">
+        <label>gr::howto::constellation_calcdist</label>
+        <link refid="classgr_1_1howto_1_1constellation__calcdist"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>gr::howto::constellation_dqpsk</label>
+        <link refid="classgr_1_1howto_1_1constellation__dqpsk"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>gr::howto::constellation_sector</label>
+        <link refid="classgr_1_1howto_1_1constellation__sector"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>gr::howto::constellation_8psk</label>
+        <link refid="classgr_1_1howto_1_1constellation__8psk"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>gr::howto::constellation</label>
+        <link refid="classgr_1_1howto_1_1constellation"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="21">
+        <label>std::vector&lt; std::vector&lt; float &gt; &gt;</label>
+      </node>
+      <node id="20">
+        <label>boost::enable_shared_from_this&lt; constellation &gt;</label>
+      </node>
+      <node id="23">
+        <label>std::vector&lt; gr_complex &gt;</label>
+      </node>
+      <node id="19">
+        <label>gr::howto::constellation</label>
+        <link refid="classgr_1_1howto_1_1constellation"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>d_soft_dec_lut</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>d_pre_diff_code</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>d_constellation</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>std::vector&lt; int &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="64" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="62" bodyend="222"/>
+    <listofallmembers>
+      <member refid="classgr_1_1howto_1_1constellation_1af5f975d397d2bd28be2beab08a148e7c" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>apply_pre_diff_code</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a99e4417f683476d0f378e9878c513b3d" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>arity</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a53ae12f0417a995eb052a163f146aeef" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>as_pmt</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1abe02ba1a4022334c80aa9d5cd6e3dfe5" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>base</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1ab934d22fa14eb27c5439fc14dfd597d0" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>bits_per_symbol</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1aedf1a3837d1cfce68bc1030449c8e91c" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>calc_arity</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a2325d368d0e3ebdb223b1dd5bd3211c4" prot="public" virt="virtual"><scope>gr::howto::constellation</scope><name>calc_euclidean_metric</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1af83054df69cbb1d2b0f7e714e41eb6db" prot="public" virt="virtual"><scope>gr::howto::constellation</scope><name>calc_hard_symbol_metric</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a8933cc49c8b6b4467aefc48250ce4c75" prot="public" virt="virtual"><scope>gr::howto::constellation</scope><name>calc_metric</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1abae2ebefb229dfe9610f242343f07f76" prot="public" virt="virtual"><scope>gr::howto::constellation</scope><name>calc_soft_dec</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a5fa0b9c78a170404e43d4f6c3ea90dd1" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>constellation</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a765bfaa07bf8e4667fcbedb4f60f9b1b" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>constellation</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a57f76992d7f26b8c8bd25f1f2585babf" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_apply_pre_diff_code</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a9fc7c5f523603ce08a99a13cc90a1283" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_arity</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1aa605a9c8a11fabdbdc10e71a7701bdd7" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_constellation</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1aa48ffa1ac99722510abd3dd5528e050c" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_dimensionality</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a83e4f83c673522036a9c804a275cfde5" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_im_max</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a7070eae0dfac7b84326852c8eb952b9c" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_im_min</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1ab64a86af56e72f24d1260a55bbdc438e" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_lut_precision</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a1f0bf5a61daf919e48ff37974d07de34" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_lut_scale</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1ad9947e8fd622660376472a8da170993b" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_pre_diff_code</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a55f9de91624b5c5b02e641e231a5da01" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_re_max</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1ae884281f78cc324a2b101faf25785d0f" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_re_min</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a59dffa43deeaf3556b66ca582c9d341d" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_rotational_symmetry</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1aaf796fd71ed1f7995d1783240c19007c" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_scalefactor</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a6d4f6e7f9841aa353f9b9b7537b17cea" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>d_soft_dec_lut</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a5fd77e860349fc7cc200ea1bef66c3e3" prot="public" virt="pure-virtual"><scope>gr::howto::constellation</scope><name>decision_maker</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a9cfe684bba2cb60d79796b1042407337" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>decision_maker_pe</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1aeb182d04643b94edbdf31f67ef551b81" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>decision_maker_v</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a9e6a1c902ae8109f0ab7ff16652a6569" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>dimensionality</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a7cce225c1471de0e981ec26269bcbbc5" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>gen_soft_dec_lut</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1affd663df6ca9d239af1655e439055b00" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>get_closest_point</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a75e82907ba4191edb7d5104a29964e53" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>get_distance</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a15663efd1d6c0a7896b6b498ccb7723b" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>has_soft_dec_lut</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1ac3cc54b6267ab08baae7e11cf8a09c62" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>map_to_points</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a7e0517ad68634c31ff970ed7d9d061a1" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>map_to_points_v</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1aaf2bea7ab02533d93f4a9d46fa709d8d" prot="protected" virt="non-virtual"><scope>gr::howto::constellation</scope><name>max_min_axes</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a0390499b202fde68388b105c519f41f2" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>points</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1adf8b19efdec7f2222ccb2cfcea591a4d" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>pre_diff_code</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a5957a858cbadb9eb657861771f30a81a" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>rotational_symmetry</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a301c41787d6cb7d9e00ac3839f507475" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>s_points</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a0f561c1ee1b56c7b3e8babf602f3d14b" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>set_pre_diff_code</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1af85b62c836304740ef93b5237c6a3446" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>set_soft_dec_lut</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a6f11b7fcd57c9d484b175bb3b1c887d6" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>soft_decision_maker</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1a8506c8f82686c989cfa84ed3569b14c6" prot="public" virt="non-virtual"><scope>gr::howto::constellation</scope><name>v_points</name></member>
+      <member refid="classgr_1_1howto_1_1constellation_1ad4ddd4dee634a07354e3f105713f6722" prot="public" virt="virtual"><scope>gr::howto::constellation</scope><name>~constellation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

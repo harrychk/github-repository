@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1howto_1_1ofdm__serializer__vcc" kind="class" prot="public">
+    <compoundname>gr::howto::ofdm_serializer_vcc</compoundname>
+    <basecompoundref prot="public" virt="virtual">tagged_stream_block</basecompoundref>
+    <includes refid="ofdm__serializer__vcc_8h" local="no">ofdm_serializer_vcc.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1howto_1_1ofdm__serializer__vcc_1acccebe43916f2050c4f8c8a7f3f75492" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1howto_1_1ofdm__serializer__vcc" kindref="compound">ofdm_serializer_vcc</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;ofdm_serializer_vcc&gt; gr::howto::ofdm_serializer_vcc::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_serializer_vcc.h" line="58" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_serializer_vcc.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__serializer__vcc_1a547fb9783a88452e7e4faf297a38704f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1howto_1_1ofdm__serializer__vcc_1acccebe43916f2050c4f8c8a7f3f75492" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::howto::ofdm_serializer_vcc::make</definition>
+        <argsstring>(int fft_len, const std::string &amp;len_tag_key=&quot;frame_len&quot;, const std::string &amp;packet_len_tag_key=&quot;&quot;, int symbols_skipped=0, const std::string &amp;carr_offset_key=&quot;&quot;, bool input_is_shifted=true)</argsstring>
+        <name>make</name>
+        <param>
+          <type>int</type>
+          <declname>fft_len</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>len_tag_key</declname>
+          <defval>&quot;frame_len&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>packet_len_tag_key</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>symbols_skipped</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>carr_offset_key</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>input_is_shifted</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fft_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FFT length </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>occupied_carriers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>See <ref refid="classgr_1_1howto_1_1ofdm__carrier__allocator__cvc" kindref="compound">ofdm_carrier_allocator_cvc</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len_tag_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key of the tag identifying the length of the input frame in OFDM symbols. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>packet_len_tag_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key of the tag identifying the number of complex symbols in this packet. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>symbols_skipped</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the first symbol is not allocated as in <computeroutput>occupied_carriers</computeroutput>[0], set this </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>carr_offset_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When this block should correct a carrier offset, specify the tag key of the offset here (not necessary if following an <ref refid="classgr_1_1howto_1_1ofdm__frame__equalizer__vcvc" kindref="compound">ofdm_frame_equalizer_vcvc</ref>) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_is_shifted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the input has the DC carrier on index 0 (i.e. it is not FFT shifted), set this to false </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_serializer_vcc.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__serializer__vcc_1a208dfa9867f5ddf9a0b53f84f8a7b57c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1howto_1_1ofdm__serializer__vcc_1acccebe43916f2050c4f8c8a7f3f75492" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::howto::ofdm_serializer_vcc::make</definition>
+        <argsstring>(const gr::howto::ofdm_carrier_allocator_cvc::sptr &amp;allocator, const std::string &amp;packet_len_tag_key=&quot;&quot;, int symbols_skipped=0, const std::string &amp;carr_offset_key=&quot;&quot;, bool input_is_shifted=true)</argsstring>
+        <name>make</name>
+        <param>
+          <type>const <ref refid="classgr_1_1howto_1_1ofdm__carrier__allocator__cvc_1a52b7a2ff1042c6806ac956420cc23460" kindref="member">gr::howto::ofdm_carrier_allocator_cvc::sptr</ref> &amp;</type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>packet_len_tag_key</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>symbols_skipped</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>carr_offset_key</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>input_is_shifted</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>allocator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The carrier allocator block of which this shall be the inverse </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>packet_len_tag_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key of the tag identifying the number of complex symbols in this packet. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>symbols_skipped</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the first symbol is not allocated as in <computeroutput>occupied_carriers</computeroutput>[0], set this </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>carr_offset_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When this block should correct a carrier offset, specify the tag key of the offset here (not necessary if following an <ref refid="classgr_1_1howto_1_1ofdm__frame__equalizer__vcvc" kindref="compound">ofdm_frame_equalizer_vcvc</ref>) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_is_shifted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the input has the DC carrier on index 0 (i.e. it is not FFT shifted), set this to false </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_serializer_vcc.h" line="86" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Serializes complex modulations symbols from OFDM sub-carriers. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is the inverse block to the carrier_allocator_cvc. It outputs the complex data symbols as a tagged stream, discarding the pilot symbols.</para><para>If given, two different tags are parsed: The first key (<computeroutput>len_tag_key</computeroutput>) specifies the number of OFDM symbols in the frame at the input. The second key (<computeroutput>packet_len_tag_key</computeroutput>) specifies the number of complex symbols that are coded into this frame. If given, this second key is then used at the output, otherwise, <computeroutput>len_tag_key</computeroutput> is used. If both are given, the packet length specifies the maximum number of output items, and the frame length specifies the exact number of consumed input items.</para><para>It is possible to correct a carrier offset in this function by passing another tag with said offset.</para><para>Input: Complex vectors of length <computeroutput>fft_len</computeroutput> Output: Complex scalars, in the same order as specified in occupied_carriers. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="171">
+        <label>tagged_stream_block</label>
+      </node>
+      <node id="170">
+        <label>gr::howto::ofdm_serializer_vcc</label>
+        <link refid="classgr_1_1howto_1_1ofdm__serializer__vcc"/>
+        <childnode refid="171" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="173">
+        <label>tagged_stream_block</label>
+      </node>
+      <node id="172">
+        <label>gr::howto::ofdm_serializer_vcc</label>
+        <link refid="classgr_1_1howto_1_1ofdm__serializer__vcc"/>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_serializer_vcc.h" line="56" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_serializer_vcc.h" bodystart="55" bodyend="93"/>
+    <listofallmembers>
+      <member refid="classgr_1_1howto_1_1ofdm__serializer__vcc_1a547fb9783a88452e7e4faf297a38704f" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_serializer_vcc</scope><name>make</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__serializer__vcc_1a208dfa9867f5ddf9a0b53f84f8a7b57c" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_serializer_vcc</scope><name>make</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__serializer__vcc_1acccebe43916f2050c4f8c8a7f3f75492" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_serializer_vcc</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

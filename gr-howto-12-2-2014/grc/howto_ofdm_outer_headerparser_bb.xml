@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<block>
+  <name>OFDM Outer Headerparser</name>
+  <key>howto_ofdm_outer_headerparser_bb</key>
+  <category>HOWTO</category>
+  <import>import howto</import>
+  <make>howto.ofdm_outer_headerparser_bb($fft_len, $occupied_carriers)</make>
+  <param>
+    <name>FFT length</name>
+    <key>fft_len</key>
+    <value>fft_len</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Occupied Carriers</name>
+    <key>occupied_carriers</key>
+    <value>occupied_carriers</value>
+    <type>raw</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+
+  <source>
+    <name>header_data</name>
+    <type>message</type>
+  </source>
+</block>

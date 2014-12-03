@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<block>
+  <name>SC FDMA Packet Headergenerator</name>
+  <key>howto_sc_fdma_packet_headergenerator_bb</key>
+  <category>HOWTO</category>
+  <import>import howto</import>
+  <make>howto.sc_fdma_packet_headergenerator_bb($header_formatter, $len_tag_key)</make>
+  <param>
+    <name>Formatter Object</name>
+    <key>header_formatter</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Length Tag Name</name>
+    <key>len_tag_key</key>
+    <value>"packet_len"</value>
+    <type>string</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>
