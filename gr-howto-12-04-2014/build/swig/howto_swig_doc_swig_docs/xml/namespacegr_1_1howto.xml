@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespacegr_1_1howto" kind="namespace">
+    <compoundname>gr::howto</compoundname>
+    <innerclass refid="classgr_1_1howto_1_1base__station__core" prot="public">gr::howto::base_station_core</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1chan__info__parser" prot="public">gr::howto::chan_info_parser</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1constellation" prot="public">gr::howto::constellation</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1constellation__calcdist" prot="public">gr::howto::constellation_calcdist</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1constellation__sector" prot="public">gr::howto::constellation_sector</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1constellation__rect" prot="public">gr::howto::constellation_rect</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1constellation__expl__rect" prot="public">gr::howto::constellation_expl_rect</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1constellation__psk" prot="public">gr::howto::constellation_psk</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1constellation__bpsk" prot="public">gr::howto::constellation_bpsk</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1constellation__qpsk" prot="public">gr::howto::constellation_qpsk</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1constellation__dqpsk" prot="public">gr::howto::constellation_dqpsk</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1constellation__8psk" prot="public">gr::howto::constellation_8psk</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1header__payload__demux" prot="public">gr::howto::header_payload_demux</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1ofdm__carrier__allocator__cvc" prot="public">gr::howto::ofdm_carrier_allocator_cvc</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1ofdm__chanest__vcvc" prot="public">gr::howto::ofdm_chanest_vcvc</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1ofdm__cyclic__prefixer" prot="public">gr::howto::ofdm_cyclic_prefixer</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1ofdm__equalizer__base" prot="public">gr::howto::ofdm_equalizer_base</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots" prot="public">gr::howto::ofdm_equalizer_1d_pilots</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe" prot="public">gr::howto::ofdm_equalizer_simpledfe</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1ofdm__frame__equalizer__vcvc" prot="public">gr::howto::ofdm_frame_equalizer_vcvc</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1ofdm__outer__headerparser__bb" prot="public">gr::howto::ofdm_outer_headerparser_bb</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1ofdm__serializer__vcc" prot="public">gr::howto::ofdm_serializer_vcc</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1packet__header__default" prot="public">gr::howto::packet_header_default</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1packet__header__ofdm" prot="public">gr::howto::packet_header_ofdm</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1sc__fdma__carrier__allocator__cvc" prot="public">gr::howto::sc_fdma_carrier_allocator_cvc</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1sc__fdma__equalizer__base" prot="public">gr::howto::sc_fdma_equalizer_base</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1sc__fdma__equalizer__1d__pilots" prot="public">gr::howto::sc_fdma_equalizer_1d_pilots</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1sc__fdma__equalizer__simpledfe" prot="public">gr::howto::sc_fdma_equalizer_simpledfe</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1sc__fdma__frame__equalizer__vcvc" prot="public">gr::howto::sc_fdma_frame_equalizer_vcvc</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1sc__fdma__interleaver" prot="public">gr::howto::sc_fdma_interleaver</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1sc__fdma__packet__headergenerator__bb" prot="public">gr::howto::sc_fdma_packet_headergenerator_bb</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1sc__fdma__packet__headerparser__b" prot="public">gr::howto::sc_fdma_packet_headerparser_b</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1symbol__decision" prot="public">gr::howto::symbol_decision</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1txt__sink" prot="public">gr::howto::txt_sink</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1user__device__core" prot="public">gr::howto::user_device_core</innerclass>
+    <innerclass refid="classgr_1_1howto_1_1user__device__debug" prot="public">gr::howto::user_device_debug</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacegr_1_1howto_1ac72db6a64f05f174d60905e25a3a08b5" prot="public" static="no">
+        <name>trellis_metric_type_t</name>
+        <enumvalue id="namespacegr_1_1howto_1ac72db6a64f05f174d60905e25a3a08b5a30a6a99b2f9d7bd19b02968a09ecce46" prot="public">
+          <name>TRELLIS_EUCLIDEAN</name>
+          <initializer>= 200</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1howto_1ac72db6a64f05f174d60905e25a3a08b5a56fef13d79e793343b26f2f262e0d2aa" prot="public">
+          <name>TRELLIS_HARD_SYMBOL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1howto_1ac72db6a64f05f174d60905e25a3a08b5a5cd24bd3255250d63b1962090046a760" prot="public">
+          <name>TRELLIS_HARD_BIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/metric_type.h" line="29" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/metric_type.h" bodystart="29" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacegr_1_1howto_1a331c6ba45f78fa06f340bef0c6f6205f" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1howto_1_1constellation" kindref="compound">constellation</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;constellation&gt; gr::howto::constellation_sptr</definition>
+        <argsstring></argsstring>
+        <name>constellation_sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" line="44" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/constellation.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chk/out-of-tree/gr-howto/include/howto/base_station_core.h" line="29" column="1"/>
+  </compounddef>
+</doxygen>

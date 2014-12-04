@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<block>
+  <name>Square ff</name>
+  <key>howto_square_ff</key>
+  <category>HOWTO</category>
+  <import>import howto</import>
+  <make>howto.square_ff($num_subchannel, $total_power, $bandwidth, $noise_density)</make>
+  <param>
+    <name>Num Subchannel</name>
+    <key>num_subchannel</key>
+    <value>16</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Total Power</name>
+    <key>total_power</key>
+    <value>1e-5</value>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Bandwidth</name>
+    <key>bandwidth</key>
+    <value>1000000</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Noise Density</name>
+    <key>noise_density</key>
+    <value>1e-11</value>
+    <type>float</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>float</type>
+  </sink>
+  <source>
+    <name>out_data</name>
+    <type>float</type>
+  </source>
+  <source>
+    <name>out_carrier</name>
+    <type>int</type>
+  </source>
+  
+</block>

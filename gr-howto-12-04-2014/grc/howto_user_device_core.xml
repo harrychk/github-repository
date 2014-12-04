@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<block>
+  <name>User Device Core</name>
+  <key>howto_user_device_core</key>
+  <category>HOWTO</category>
+  <import>import howto</import>
+  <make>howto.user_device_core($device_id, $packet_len, $request_utb, $acknowledgement_btu, $acknowledgement_utb, $acknowledgement_end_btu, $acknowledgement_end_utb)</make>
+  <param>
+    <name>Device ID</name>
+	<key>device_id</key>
+	<value></value>
+	<type>int</type>
+  </param>
+  <param>
+    <name>Packet Length</name>
+	<key>packet_len</key>
+	<value>96</value>
+	<type>int</type>
+  </param>
+  <param>
+    <name>Request</name>
+    <key>request_utb</key>
+    <value>request_seq</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Ack B to U</name>
+    <key>acknowledgement_btu</key>
+    <value>acknowledgement_btu_seq</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Ack U to B</name>
+    <key>acknowledgement_utb</key>
+    <value>acknowledgement_utb_seq</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>End Ack B to U</name>
+    <key>acknowledgement_end_btu</key>
+    <value>acknowledgement_end_btu_seq</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>End Ack U to B</name>
+    <key>acknowledgement_end_utb</key>
+    <value>acknowledgement_end_utb_seq</value>
+    <type>raw</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+
+</block>

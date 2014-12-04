@@ -1,0 +1,274 @@
+/* -*- c++ -*- */
+/* 
+ * Copyright 2013 <+YOU OR YOUR COMPANY+>.
+ * 
+ * This is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3, or (at your option)
+ * any later version.
+ * 
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this software; see the file COPYING.  If not, write to
+ * the Free Software Foundation, Inc., 51 Franklin Street,
+ * Boston, MA 02110-1301, USA.
+ */
+
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+
+#include <gnuradio/io_signature.h>
+#include "square_ff_impl.h"
+#include "iostream"
+#include "fstream"
+#include "algorithm"
+
+namespace gr {
+  namespace howto {
+
+    square_ff::sptr
+
+    square_ff::make(
+	 int num_subchannel,
+	 float total_power,
+	 int bandwidth,
+	 float noise_density
+    )
+    {
+      return gnuradio::get_initial_sptr(
+         new square_ff_impl(
+	    num_subchannel,
+	    total_power,
+	    bandwidth,
+	    noise_density
+         )
+      );
+    }
+
+    /*
+     * The private constructor
+     */
+
+    /*square_ff_impl::square_ff_impl() : block("square_ff",
+		      io_signature::make(1, 1, sizeof(float)),
+		      io_signature::make(1, 1, sizeof(float)))
+    {}*/
+typedef struct
+{
+    float value;
+    float NCR;
+    int index;
+    int available;
+} power;
+
+typedef struct
+{
+    int index;
+    int allocated;
+} user;
+
+    std::vector<power> init_power_allo;
+    std::vector<user> usr;
+    std::vector<int> temp1;
+    std::vector<int> temp2;
+    square_ff_impl::square_ff_impl(
+	 int num_subchannel,
+	 float total_power,
+	 int bandwidth,
+	 float noise_density
+    ) : block("square_ff",
+		      io_signature::make(1, 1, sizeof(float)),
+		      io_signature::make(1, 1, sizeof(float))),
+	d_num_subchannel(num_subchannel),
+	d_total_power(total_power),
+	d_bandwidth(bandwidth),
+	d_noise_density(noise_density)
+    {
+	std::vector<power> a(d_num_subchannel);
+	for (int i=0;i<d_num_subchannel;i++){
+	    a[i].available = 1;
+	    a[i].index= i;
+	}
+	init_power_allo=a;
+
+	std::vector<user> b(10);
+	for (int i=0;i<b.size();i++){
+	    b[i].allocated = 0;
+	    b[i].index = i;
+	}
+	usr = b;
+	
+	temp1=std::vector<int>(usr.size());
+	temp2=std::vector<int>(usr.size());
+    }
+
+    /*
+     * Our virtual destructor.
+     */
+    square_ff_impl::~square_ff_impl()
+    {
+    }
+
+
+
+//compare function for down sort
+bool compare(power a, power b)
+{
+	power* power_a= &a;
+	power* power_b= &b;
+	if (power_a->value > power_b->value) return true;
+    if (power_a->value < power_b->value) return false;
+
+    return false;
+}
+
+std::vector<float> rayleigh_random (int num)
+{
+	srand (1);
+
+	std::vector<float> ran(num);
+	std::vector<float> rayleigh(num);
+	for(int i=0;i<num;i++)
+    {
+        ran[i] = (float)rand();
+		rayleigh[i] = ran[i] / RAND_MAX; //std::cout << rayleigh[i] << "  ";
+		rayleigh[i]=1/0.6552f*sqrt(-2*log(rayleigh[i]));
+    }
+	return rayleigh;
+}
+    
+
+    int
+    square_ff_impl::general_work (int noutput_items,
+		       gr_vector_int &ninput_items,
+                       gr_vector_const_void_star &input_items,
+                       gr_vector_void_star &output_items)
+    {
+        const float *in = (const float *) input_items[0];
+        float *out_data = (float *) output_items[0];
+	//int *out_carrier = (int *) output_items[1];
+
+	//std::cout<<in[0];
+
+        // Do <+signal processing+>
+        for (int i = 0; i < noutput_items; i++) {
+	    
+            out_data[i] = in[i] * in[i];
+        }
+
+	//*******************************//
+	//        waterfilling           //
+	//*******************************//
+	//initial
+	std::vector<float> channel_state_info = rayleigh_random(d_num_subchannel);
+
+	//initial power allocation
+	float NCR_sum=0; //sum of noise to carrier ratio
+	float subchannel_noise = d_noise_density*d_bandwidth/d_num_subchannel;
+	std::vector<float> carrier_to_noise_ratio(d_num_subchannel);
+	
+	for (int i = 0; i < d_num_subchannel; i++)
+	{
+		carrier_to_noise_ratio[i]=channel_state_info[i]*channel_state_info[i]/subchannel_noise;
+		NCR_sum= NCR_sum+1/carrier_to_noise_ratio[i];
+	}
+	for (int i = 0; i < d_num_subchannel; i++)
+	{
+		init_power_allo[i].value=(d_total_power + NCR_sum)/d_num_subchannel - 1/carrier_to_noise_ratio[i];
+		init_power_allo[i].NCR=1/carrier_to_noise_ratio[i];
+		init_power_allo[i].index=i;
+	}
+
+	//iterative part of the algorithm
+	//negtive check
+	bool is_negtive=false;
+	for(int i=0;i<d_num_subchannel;i++)
+	{
+		if(init_power_allo[i].value<0)
+			is_negtive=true;
+	}
+
+	//iterative calculation
+	while(is_negtive)
+	{
+		float NCR_rem_sum=0;
+		int num_subchannel_rem=0;
+		std::vector<float> CRN_rem(d_num_subchannel,0);
+		for (int i=0;i<d_num_subchannel;i++)
+		{
+			if(init_power_allo[i].value>0)
+			{
+				num_subchannel_rem++;
+				CRN_rem[i]=carrier_to_noise_ratio[i];
+				NCR_rem_sum=NCR_rem_sum+1/CRN_rem[i];
+			}
+			else
+				init_power_allo[i].value=0;
+		}
+		for (int i=0;i<d_num_subchannel;i++)
+		{
+			if(init_power_allo[i].value>0)
+			{
+				init_power_allo[i].value=(d_total_power + NCR_rem_sum)/num_subchannel_rem - 1/CRN_rem[i];
+				init_power_allo[i].NCR=1/CRN_rem[i];
+			}
+		}
+		//negtive check
+		int num_negtive=0;
+		for(int i=0;i<d_num_subchannel;i++)
+		{
+			if(init_power_allo[i].value<0)
+				num_negtive++;
+		}
+		if(num_negtive==0)
+			is_negtive=false;
+	}
+	
+	std::ofstream outfile1 ("/home/chk/Documents/resource_allocation.txt");	
+	for (int i = 0; i < d_num_subchannel; i++){
+		outfile1 << init_power_allo[i].index << "   " << init_power_allo[i].value << "   "<<init_power_allo[i].NCR <<"   \n";
+	}
+	outfile1.close();
+
+	//sort
+	
+	std::sort(init_power_allo.begin(), init_power_allo.end(), compare);
+
+	//*************************//
+	//      allocate user      //
+	//*************************//
+	std::ofstream outfile2 ("/home/chk/Documents/subchannel_status.txt");
+	
+	//init_power_allo[0].available = 0;
+	//std::cout<<usr[0].allocated<<"  "<<usr[1].allocated;
+	for (int i = 0; i < usr.size(); i++){
+	    
+		for(int j = 0; j < d_num_subchannel; j++){
+			if(init_power_allo[j].value!=0&&usr[i].allocated!=1&&init_power_allo[j].available==1){
+				temp1[i]=init_power_allo[j].index;
+				temp2[i]=usr[i].index;
+				init_power_allo[j].available=0;
+				usr[i].allocated =1;
+			}
+		}
+		outfile2 << temp1[i] << "   " << temp2[i] <<"   \n";
+	}
+	outfile2.close();
+
+
+        // Tell runtime system how many input items we consumed on
+        // each input stream.
+        consume_each (noutput_items);
+
+        // Tell runtime system how many output items we produced.
+        return noutput_items;
+    }
+
+  } /* namespace howto */
+} /* namespace gr */
+

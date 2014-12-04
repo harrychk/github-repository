@@ -1,9 +1,0 @@
-/home/chk/out-of-tree/gr-howto/build/swig/CMakeFiles/_howto_swig.dir
-/home/chk/out-of-tree/gr-howto/build/swig/CMakeFiles/_howto_swig_doc_tag.dir
-/home/chk/out-of-tree/gr-howto/build/swig/CMakeFiles/_howto_swig_swig_tag.dir
-/home/chk/out-of-tree/gr-howto/build/lib/CMakeFiles/gnuradio-howto.dir
-/home/chk/out-of-tree/gr-howto/build/apps/CMakeFiles/pygen_apps_9a6dd.dir
-/home/chk/out-of-tree/gr-howto/build/python/CMakeFiles/pygen_python_b278e.dir
-/home/chk/out-of-tree/gr-howto/build/swig/CMakeFiles/pygen_swig_79db2.dir
-/home/chk/out-of-tree/gr-howto/build/lib/CMakeFiles/test-howto.dir
-/home/chk/out-of-tree/gr-howto/build/CMakeFiles/uninstall.dir

@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1howto_1_1ofdm__equalizer__simpledfe" kind="class" prot="public">
+    <compoundname>gr::howto::ofdm_equalizer_simpledfe</compoundname>
+    <basecompoundref refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots" prot="public" virt="non-virtual">gr::howto::ofdm_equalizer_1d_pilots</basecompoundref>
+    <includes refid="ofdm__equalizer__simpledfe_8h" local="no">ofdm_equalizer_simpledfe.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1a9f70cf691035c8597a6e1305a3a4f892" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe" kindref="compound">ofdm_equalizer_simpledfe</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;ofdm_equalizer_simpledfe&gt; gr::howto::ofdm_equalizer_simpledfe::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_simpledfe.h" line="66" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_simpledfe.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1abdfb7ea8bcb25f4ff37efed1788ab9ee" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacegr_1_1howto_1a331c6ba45f78fa06f340bef0c6f6205f" kindref="member">gr::howto::constellation_sptr</ref></type>
+        <definition>gr::howto::constellation_sptr gr::howto::ofdm_equalizer_simpledfe::d_constellation</definition>
+        <argsstring></argsstring>
+        <name>d_constellation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_simpledfe.h" line="124" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_simpledfe.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1a51c580dddbf5edb02624847b440e3fc6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::howto::ofdm_equalizer_simpledfe::d_alpha</definition>
+        <argsstring></argsstring>
+        <name>d_alpha</name>
+        <briefdescription>
+<para>Averaging coefficient. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_simpledfe.h" line="126" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_simpledfe.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1a04ba6fc1f77d2a33ce182687af57f833" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::howto::ofdm_equalizer_simpledfe::ofdm_equalizer_simpledfe</definition>
+        <argsstring>(int fft_len, const gr::howto::constellation_sptr &amp;constellation, const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;occupied_carriers=std::vector&lt; std::vector&lt; int &gt; &gt;(), const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;pilot_carriers=std::vector&lt; std::vector&lt; int &gt; &gt;(), const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;pilot_symbols=std::vector&lt; std::vector&lt; gr_complex &gt; &gt;(), int symbols_skipped=0, float alpha=0.1, bool input_is_shifted=true)</argsstring>
+        <name>ofdm_equalizer_simpledfe</name>
+        <param>
+          <type>int</type>
+          <declname>fft_len</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacegr_1_1howto_1a331c6ba45f78fa06f340bef0c6f6205f" kindref="member">gr::howto::constellation_sptr</ref> &amp;</type>
+          <declname>constellation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>occupied_carriers</declname>
+          <defval>std::vector&lt; std::vector&lt; int &gt; &gt;()</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>pilot_carriers</declname>
+          <defval>std::vector&lt; std::vector&lt; int &gt; &gt;()</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;</type>
+          <declname>pilot_symbols</declname>
+          <defval>std::vector&lt; std::vector&lt; gr_complex &gt; &gt;()</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>symbols_skipped</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+          <defval>0.1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>input_is_shifted</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_simpledfe.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1ac94e914ac32d4fe269181ae6a764aae9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::howto::ofdm_equalizer_simpledfe::~ofdm_equalizer_simpledfe</definition>
+        <argsstring>()</argsstring>
+        <name>~ofdm_equalizer_simpledfe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_simpledfe.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1ab4b7faa05e9a37f1ae1a3c72cb78c52a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void gr::howto::ofdm_equalizer_simpledfe::equalize</definition>
+        <argsstring>(gr_complex *frame, int n_sym, const int n_symbol, int start_pos, const std::vector&lt; gr_complex &gt; &amp;initial_taps=std::vector&lt; gr_complex &gt;(), const std::vector&lt; tag_t &gt; &amp;tags=std::vector&lt; tag_t &gt;())</argsstring>
+        <name>equalize</name>
+        <reimplements refid="classgr_1_1howto_1_1ofdm__equalizer__base_1a50aad1da4c51e75e787b0bc8110eebfe">equalize</reimplements>
+        <param>
+          <type>gr_complex *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_sym</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>n_symbol</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_pos</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>initial_taps</declname>
+          <defval>std::vector&lt; gr_complex &gt;()</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; tag_t &gt; &amp;</type>
+          <declname>tags</declname>
+          <defval>std::vector&lt; tag_t &gt;()</defval>
+        </param>
+        <briefdescription>
+<para>Run the actual equalization. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_simpledfe.h" line="80" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1a8c5fa1f7be3fb59e9edf434eb751fffb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1howto_1_1ofdm__equalizer__base_1afbfd44f60a753622deae4cc0064c3956" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::howto::ofdm_equalizer_simpledfe::make</definition>
+        <argsstring>(int fft_len, const gr::howto::constellation_sptr &amp;constellation, const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;occupied_carriers=std::vector&lt; std::vector&lt; int &gt; &gt;(), const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;pilot_carriers=std::vector&lt; std::vector&lt; int &gt; &gt;(), const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;pilot_symbols=std::vector&lt; std::vector&lt; gr_complex &gt; &gt;(), int symbols_skipped=0, float alpha=0.1, bool input_is_shifted=true)</argsstring>
+        <name>make</name>
+        <param>
+          <type>int</type>
+          <declname>fft_len</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacegr_1_1howto_1a331c6ba45f78fa06f340bef0c6f6205f" kindref="member">gr::howto::constellation_sptr</ref> &amp;</type>
+          <declname>constellation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>occupied_carriers</declname>
+          <defval>std::vector&lt; std::vector&lt; int &gt; &gt;()</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>pilot_carriers</declname>
+          <defval>std::vector&lt; std::vector&lt; int &gt; &gt;()</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;</type>
+          <declname>pilot_symbols</declname>
+          <defval>std::vector&lt; std::vector&lt; gr_complex &gt; &gt;()</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>symbols_skipped</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+          <defval>0.1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>input_is_shifted</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_simpledfe.h" line="112" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="153">
+        <label>boost::enable_shared_from_this&lt; ofdm_equalizer_base &gt;</label>
+      </node>
+      <node id="151">
+        <label>gr::howto::ofdm_equalizer_1d_pilots</label>
+        <link refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots"/>
+        <childnode refid="152" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="150">
+        <label>gr::howto::ofdm_equalizer_simpledfe</label>
+        <link refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe"/>
+        <childnode refid="151" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="152">
+        <label>gr::howto::ofdm_equalizer_base</label>
+        <link refid="classgr_1_1howto_1_1ofdm__equalizer__base"/>
+        <childnode refid="153" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="157">
+        <label>boost::enable_shared_from_this&lt; ofdm_equalizer_base &gt;</label>
+      </node>
+      <node id="155">
+        <label>gr::howto::ofdm_equalizer_1d_pilots</label>
+        <link refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots"/>
+        <childnode refid="156" relation="public-inheritance">
+        </childnode>
+        <childnode refid="158" relation="usage">
+          <edgelabel>d_pilot_carriers</edgelabel>
+        </childnode>
+        <childnode refid="159" relation="usage">
+          <edgelabel>d_occupied_carriers</edgelabel>
+        </childnode>
+        <childnode refid="160" relation="usage">
+          <edgelabel>d_channel_state</edgelabel>
+        </childnode>
+        <childnode refid="161" relation="usage">
+          <edgelabel>d_pilot_symbols</edgelabel>
+        </childnode>
+      </node>
+      <node id="160">
+        <label>std::vector&lt; gr_complex &gt;</label>
+      </node>
+      <node id="154">
+        <label>gr::howto::ofdm_equalizer_simpledfe</label>
+        <link refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe"/>
+        <childnode refid="155" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="159">
+        <label>std::vector&lt; bool &gt;</label>
+      </node>
+      <node id="156">
+        <label>gr::howto::ofdm_equalizer_base</label>
+        <link refid="classgr_1_1howto_1_1ofdm__equalizer__base"/>
+        <childnode refid="157" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>std::vector&lt; std::vector&lt; bool &gt; &gt;</label>
+        <childnode refid="159" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="161">
+        <label>std::vector&lt; std::vector&lt; gr_complex &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_simpledfe.h" line="64" column="1" bodyfile="/home/chk/out-of-tree/gr-howto/include/howto/ofdm_equalizer_simpledfe.h" bodystart="63" bodyend="127"/>
+    <listofallmembers>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1af9581f7c065249cc2c79e25dbcba89fb" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>base</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1a51c580dddbf5edb02624847b440e3fc6" prot="private" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>d_alpha</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots_1a22107f428afd5ad2aeaad7eb6d500897" prot="protected" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>d_channel_state</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1abdfb7ea8bcb25f4ff37efed1788ab9ee" prot="private" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>d_constellation</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1a63d33d505056c96d902a79754f34802a" prot="protected" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>d_fft_len</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots_1a494d7f3b836299072e2108d00f12a01c" prot="protected" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>d_occupied_carriers</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots_1a5e5fb5dbc858490273b0bc10585df9c1" prot="protected" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>d_pilot_carr_set</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots_1a00645e0bfe68f22a2f43f984fce96fcf" prot="protected" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>d_pilot_carriers</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots_1aa863f75c885bcb604d4dd644bee11270" prot="protected" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>d_pilot_symbols</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots_1a10795149defff138897611e48eaa3863" prot="protected" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>d_symbols_skipped</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1ab4b7faa05e9a37f1ae1a3c72cb78c52a" prot="public" virt="virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>equalize</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1a789d54f6124930cf7f579fc22e581517" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>fft_len</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots_1a1a2cfd40363d26af75ff871fc02d4974" prot="public" virt="virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>get_channel_state</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1a8c5fa1f7be3fb59e9edf434eb751fffb" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>make</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots_1a9c9fca937695101b8d0e09d6370e746e" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>ofdm_equalizer_1d_pilots</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1aa4906315bfb2312336e241600bc070c6" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>ofdm_equalizer_base</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1a04ba6fc1f77d2a33ce182687af57f833" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>ofdm_equalizer_simpledfe</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots_1aac616c168449c33014582cea15103142" prot="public" virt="virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>reset</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1a9f70cf691035c8597a6e1305a3a4f892" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>sptr</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__1d__pilots_1a8c75f9f1c71ddbb09f3e286096ffeed0" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>~ofdm_equalizer_1d_pilots</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__base_1a2529650807e845972a1afdbe7aa71ca8" prot="public" virt="virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>~ofdm_equalizer_base</name></member>
+      <member refid="classgr_1_1howto_1_1ofdm__equalizer__simpledfe_1ac94e914ac32d4fe269181ae6a764aae9" prot="public" virt="non-virtual"><scope>gr::howto::ofdm_equalizer_simpledfe</scope><name>~ofdm_equalizer_simpledfe</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
